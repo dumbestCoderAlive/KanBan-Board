@@ -42,7 +42,9 @@ function dragDrop(e){
   const id = e.dataTransfer.getData('text/plain');
 
   const card = document.getElementById(id);
-
+  
+// Here "this" refers to the list over which our mouse is hovering and the drop event will be registered on that list and card 
+  // is the original card we picked up from earlier
   this.appendChild(card);
 
   this.classList.remove('over');
